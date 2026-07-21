@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "diwan": { "label": "Al-Diwan", "subtitle": "Articles" },
+    "mayadin": { "label": "Al-Mayadin", "subtitle": "Sessions d'entraînement" },
+    "itad": { "label": "Al-Itad", "subtitle": "Équipement" },
+    "multaqa": { "label": "Al-Multaqa", "subtitle": "Événements" },
+    "bawwaba": { "label": "Al-Bawwaba", "subtitle": "Réservation" }
+  },
+  "home": {
+    "title": "ARKDAR",
+    "tagline": "Héritage mamelouk, référence authentique du tir à l'arc à cheval"
+  },
+  "theme": {
+    "toggleToDark": "Passer au mode sombre",
+    "toggleToLight": "Passer au mode clair"
+  },
+  "section": {
+    "placeholder": "Contenu en préparation"
+  }
+}

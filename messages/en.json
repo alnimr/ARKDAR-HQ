@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "diwan": { "label": "Al-Diwan", "subtitle": "Articles" },
+    "mayadin": { "label": "Al-Mayadin", "subtitle": "Training sessions" },
+    "itad": { "label": "Al-Itad", "subtitle": "Equipment" },
+    "multaqa": { "label": "Al-Multaqa", "subtitle": "Events" },
+    "bawwaba": { "label": "Al-Bawwaba", "subtitle": "Booking" }
+  },
+  "home": {
+    "title": "ARKDAR",
+    "tagline": "Mamluk heritage, the authentic reference for horseback archery"
+  },
+  "theme": {
+    "toggleToDark": "Switch to dark mode",
+    "toggleToLight": "Switch to light mode"
+  },
+  "section": {
+    "placeholder": "Content in progress"
+  }
+}

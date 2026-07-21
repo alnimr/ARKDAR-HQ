@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/*
+  ARKDAR dual-theme tokens — role-swap, not RGB-channel inversion.
+  Values and rationale: plan sprightly-sparking-rossum.md, Phase 1.
+  Source palette: arkdar_mamluk_system.jsx design tokens (T).
+*/
+:root {
+  --bg-primary: #0d0b08;
+  --bg-surface: #0f0d0a;
+  --text-primary: #f2ebd9;
+  --accent-primary: #b8922a;
+  --accent-highlight: #d4af6a;
+  --border-subtle: rgba(184, 146, 42, 0.18);
+  --badge-heritage-bg: rgba(27, 61, 110, 0.25);
+  --badge-heritage-text: rgba(212, 175, 106, 0.7);
+  --color-lapis: #1b3d6e;
+  --color-crimson: #7a1515;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --bg-primary: #f2ebd9;
+    --bg-surface: #e8dfc7;
+    --text-primary: #0d0b08;
+    --accent-highlight: #6b5119;
+    --badge-heritage-bg: rgba(27, 61, 110, 0.38);
+    --badge-heritage-text: #6b5119;
+  }
+}
+
+:root[data-theme="light"] {
+  --bg-primary: #f2ebd9;
+  --bg-surface: #e8dfc7;
+  --text-primary: #0d0b08;
+  --accent-highlight: #6b5119;
+  --badge-heritage-bg: rgba(27, 61, 110, 0.38);
+  --badge-heritage-text: #6b5119;
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #0d0b08;
+  --bg-surface: #0f0d0a;
+  --text-primary: #f2ebd9;
+  --accent-highlight: #d4af6a;
+  --badge-heritage-bg: rgba(27, 61, 110, 0.25);
+  --badge-heritage-text: rgba(212, 175, 106, 0.7);
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-surface: var(--bg-surface);
+  --color-foreground: var(--text-primary);
+  --color-accent: var(--accent-primary);
+  --color-accent-highlight: var(--accent-highlight);
+  --color-border-subtle: var(--border-subtle);
+  --color-badge-heritage-bg: var(--badge-heritage-bg);
+  --color-badge-heritage-text: var(--badge-heritage-text);
+  --color-lapis: var(--color-lapis);
+  --color-crimson: var(--color-crimson);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
