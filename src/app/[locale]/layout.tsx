@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { El_Messiri, Cinzel, Scheherazade_New } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing, rtlLocales, type Locale } from "@/i18n/routing";
@@ -7,14 +7,26 @@ import { ThemeInitScript } from "@/components/theme/ThemeInitScript";
 import { SiteNav } from "@/components/nav/SiteNav";
 import "../globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// Typography per ARKDAR Brand Constitution v4.0 (supersedes v1.0/v3.0):
+// El Messiri = brand voice, headings (AR + EN). Cinzel = Latin authority
+// voice, overlines/labels/CTAs, Latin-only. Scheherazade New = Arabic body
+// text only, never bold.
+const fontBrand = El_Messiri({
+  variable: "--font-brand",
+  subsets: ["arabic", "latin"],
+  weight: ["500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fontLatin = Cinzel({
+  variable: "--font-latin",
   subsets: ["latin"],
+  weight: ["400", "600"],
+});
+
+const fontBody = Scheherazade_New({
+  variable: "--font-body",
+  subsets: ["arabic", "latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -44,7 +56,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${fontBrand.variable} ${fontLatin.variable} ${fontBody.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>

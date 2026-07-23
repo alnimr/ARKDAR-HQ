@@ -58,14 +58,101 @@
   --color-badge-heritage-text: var(--badge-heritage-text);
   --color-lapis: var(--color-lapis);
   --color-crimson: var(--color-crimson);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /*
+    Typography per ARKDAR Brand Constitution v4.0:
+    El Messiri = brand voice, headings (AR + EN), never body text.
+    Cinzel = Latin authority voice, overlines/labels only, Latin-only.
+    Scheherazade New = Arabic body/article text only, never bold.
+  */
+  --font-heading: var(--font-brand), "Noto Serif Arabic", serif;
+  --font-latin-label: var(--font-latin), "Trajan Pro", Georgia, serif;
+  --font-arabic-body: var(--font-body), "Noto Naskh Arabic", serif;
+}
+
+:lang(de) {
+  --font-heading: var(--font-brand), Alegreya, serif;
+}
+
+:lang(fr) {
+  --font-heading: var(--font-brand), Alegreya, serif;
 }
 
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
+  font-family: var(--font-arabic-body);
   transition:
     background-color 0.2s ease,
     color 0.2s ease;
+}
+
+/*
+  Type scale per Brand Constitution v4.0 Chapter 04. Sizes use clamp()
+  per spec. Body sizes hard-lock weight 400 — Scheherazade New must
+  never be bold. Overline/label are Latin-only, uppercase, tracked.
+*/
+.text-display {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 6vw, 6rem);
+  line-height: 1.05;
+}
+
+.text-h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.text-h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.375rem, 3vw, 2.75rem);
+  line-height: 1.15;
+}
+
+.text-h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 2.5vw, 2.25rem);
+  line-height: 1.2;
+}
+
+.text-h4 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(1.125rem, 2vw, 1.75rem);
+  line-height: 1.25;
+}
+
+.text-overline {
+  font-family: var(--font-latin-label);
+  font-weight: 400;
+  font-size: 0.625rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+
+.text-body-l {
+  font-family: var(--font-arabic-body);
+  font-weight: 400 !important;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.text-body-m {
+  font-family: var(--font-arabic-body);
+  font-weight: 400 !important;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.text-label {
+  font-family: var(--font-latin-label);
+  font-weight: 600;
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
 }
