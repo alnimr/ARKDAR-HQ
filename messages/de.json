@@ -1,10 +1,10 @@
 {
   "nav": {
-    "diwan": { "label": "Al-Diwan", "subtitle": "Artikel" },
-    "mayadin": { "label": "Al-Mayadin", "subtitle": "Trainingseinheiten" },
-    "itad": { "label": "Al-Itad", "subtitle": "Ausrüstung" },
-    "multaqa": { "label": "Al-Multaqa", "subtitle": "Veranstaltungen" },
-    "bawwaba": { "label": "Al-Bawwaba", "subtitle": "Buchung" }
+    "diwan": { "label": "Diwan", "subtitle": "Artikel" },
+    "mayadin": { "label": "Mayadin", "subtitle": "Trainingseinheiten" },
+    "itad": { "label": "Itad", "subtitle": "Ausrüstung" },
+    "multaqa": { "label": "Multaqa", "subtitle": "Veranstaltungen" },
+    "bawwaba": { "label": "Bawwaba", "subtitle": "Buchung" }
   },
   "home": {
     "title": "ARKDAR",
